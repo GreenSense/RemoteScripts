@@ -7,7 +7,7 @@ sh alerts.sh
 echo "..."
 
 # Sleep before repeating
-sleep 2
+sleep 10
 
 # Repeat this script
 sh alerts-ongoing.sh
