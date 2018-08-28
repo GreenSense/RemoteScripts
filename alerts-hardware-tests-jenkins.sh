@@ -1,7 +1,7 @@
 . ./common.sh.security
 
 # Index (master)
-job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/Index/job/master/lastBuild/api/json | grep "\"result\":\"SUCCESS\""`
+job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/Index/job/master/lastCompletedBuild/api/json | grep "\"result\":\"SUCCESS\""`
 
 if [ "$job_status" = "" ]
 then
@@ -9,7 +9,7 @@ then
 fi
 
 # Index (dev)
-job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/Index/job/dev/lastBuild/api/json | grep "\"result\":\"SUCCESS\""`
+job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/Index/job/dev/lastCompletedBuild/api/json | grep "\"result\":\"SUCCESS\""`
 
 if [ "$job_status" = "" ]
 then
@@ -17,7 +17,7 @@ then
 fi
 
 # SoilMoistureSensorCalibratedSerial (master)
-job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/SoilMoistureSensorCalibratedSerial/job/master/lastBuild/api/json | grep "\"result\":\"SUCCESS\""`
+job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/SoilMoistureSensorCalibratedSerial/job/master/lastCompletedBuild/api/json | grep "\"result\":\"SUCCESS\""`
 
 if [ "$job_status" = "" ]
 then
@@ -25,7 +25,7 @@ then
 fi
 
 # SoilMoistureSensorCalibratedSerial (dev)
-job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/SoilMoistureSensorCalibratedSerial/job/dev/lastBuild/api/json | grep "\"result\":\"SUCCESS\""`
+job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/SoilMoistureSensorCalibratedSerial/job/dev/lastCompletedBuild/api/json | grep "\"result\":\"SUCCESS\""`
 
 if [ "$job_status" = "" ]
 then
@@ -33,7 +33,7 @@ then
 fi
 
 # SoilMoistureSensorCalibratedSerialESP (master)
-job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/SoilMoistureSensorCalibratedSerialESP/job/master/lastBuild/api/json | grep "\"result\":\"SUCCESS\""`
+job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/SoilMoistureSensorCalibratedSerialESP/job/master/lastCompletedBuild/api/json | grep "\"result\":\"SUCCESS\""`
 
 if [ "$job_status" = "" ]
 then
@@ -41,7 +41,7 @@ then
 fi
 
 # SoilMoistureSensorCalibratedSerialESP (dev)
-job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/SoilMoistureSensorCalibratedSerialESP/job/dev/lastBuild/api/json | grep "\"result\":\"SUCCESS\""`
+job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/SoilMoistureSensorCalibratedSerialESP/job/dev/lastCompletedBuild/api/json | grep "\"result\":\"SUCCESS\""`
 
 if [ "$job_status" = "" ]
 then
@@ -49,7 +49,7 @@ then
 fi
 
 # SoilMoistureSensorCalibratedPump (master)
-job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/SoilMoistureSensorCalibratedPump/job/master/lastBuild/api/json | grep "\"result\":\"SUCCESS\""`
+job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/SoilMoistureSensorCalibratedPump/job/master/lastCompletedBuild/api/json | grep "\"result\":\"SUCCESS\""`
 
 if [ "$job_status" = "" ]
 then
@@ -57,7 +57,7 @@ then
 fi
 
 # SoilMoistureSensorCalibratedPump (dev)
-job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/SoilMoistureSensorCalibratedPump/job/dev/lastBuild/api/json | grep "\"result\":\"SUCCESS\""`
+job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/SoilMoistureSensorCalibratedPump/job/dev/lastCompletedBuild/api/json | grep "\"result\":\"SUCCESS\""`
 
 if [ "$job_status" = "" ]
 then
@@ -65,7 +65,7 @@ then
 fi
 
 # SoilMoistureSensorCalibratedPumpESP (master)
-job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/SoilMoistureSensorCalibratedPumpESP/job/master/lastBuild/api/json | grep "\"result\":\"SUCCESS\""`
+job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/SoilMoistureSensorCalibratedPumpESP/job/master/lastCompletedBuild/api/json | grep "\"result\":\"SUCCESS\""`
 
 if [ "$job_status" = "" ]
 then
@@ -73,7 +73,7 @@ then
 fi
 
 # SoilMoistureSensorCalibratedPumpESP (dev)
-job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/SoilMoistureSensorCalibratedPumpESP/job/dev/lastBuild/api/json | grep "\"result\":\"SUCCESS\""`
+job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/SoilMoistureSensorCalibratedPumpESP/job/dev/lastCompletedBuild/api/json | grep "\"result\":\"SUCCESS\""`
 
 if [ "$job_status" = "" ]
 then
@@ -81,7 +81,7 @@ then
 fi
 
 # TestProject (master)
-job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/TestProject/job/master/lastBuild/api/json | grep "\"result\":\"SUCCESS\""`
+job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/TestProject/job/master/lastCompletedBuild/api/json | grep "\"result\":\"SUCCESS\""`
 
 if [ "$job_status" = "" ]
 then
@@ -89,7 +89,7 @@ then
 fi
 
 # TestProject (dev)
-job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/TestProject/job/dev/lastBuild/api/json | grep "\"result\":\"SUCCESS\""`
+job_status=`curl -s http://$GARDEN_HARDWARE_TESTS_HOST:8080/job/GreenSense/job/TestProject/job/dev/lastCompletedBuild/api/json | grep "\"result\":\"SUCCESS\""`
 
 if [ "$job_status" = "" ]
 then
