@@ -1,7 +1,3 @@
 . ./common.sh.security
 
-fping -c1 -t300 $GARDEN_HOST 2>/dev/null 1>/dev/null
-if [ "$?" = 1 ]
-then
-  echo "Garden ($GARDEN_HOST): down"
-fi
+sh alerts-host.sh "Garden Host" $GARDEN_HOST $GARDEN_SSH_USERNAME $GARDEN_SSH_PASSWORD $GARDEN_SSH_PORT
