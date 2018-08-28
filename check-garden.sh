@@ -1,3 +1,3 @@
 . ./common.sh.security
 
-sshpass -p $GARDEN_SSH_PASSWORD ssh $GARDEN_SSH_USERNAME@$GARDEN_HOST "cd workspace/GreenSense/Index; sh check-garden.sh" || echo "Garden ($GARDEN_HOST) is down"
+sshpass -p $GARDEN_SSH_PASSWORD ssh -o "StrictHostKeyChecking no" $GARDEN_SSH_USERNAME@$GARDEN_HOST -p $GARDEN_SSH_PORT "cd workspace/GreenSense/Index; sh check-garden.sh" || echo "Garden ($GARDEN_HOST) is down"
