@@ -45,4 +45,4 @@ if [ $IS_DEBUG = 1 ]; then
 	echo "Port: $SSH_PORT"
 fi
 
-sshpass -p $SSH_PASSWORD ssh -o "StrictHostKeyChecking no" -q -p $SSH_PORT $SSH_USERNAME@$HOST "exit" || echo "$LABEL ($HOST:$SSH_PORT) is down"
+sshpass -p $SSH_PASSWORD ssh -o ConnectTimeout=3 -o "StrictHostKeyChecking no" -q -p $SSH_PORT $SSH_USERNAME@$HOST "exit" || echo "$LABEL ($HOST:$SSH_PORT) is down"
